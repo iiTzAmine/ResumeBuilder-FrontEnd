@@ -1,12 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import LaddingPage from './LaddingPage';
+import LoginPage from './Pages/LoginPage';
+import RegisterPage from './Pages/RegisterPage';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import "./index.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LaddingPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <LaddingPage />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

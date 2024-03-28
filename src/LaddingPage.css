@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.__flex {
+    display: flex;
+}
+
+.__center_items {
+    justify-content: center;
+    align-items: center;
+}
+
+.v {
+    background-image: url("assets/96dc5745ec0574bfb1d8f59f84d8e856.svg");
+    /* background-position: cover; */
+    height: 80vh;
+}
+
+.container-cv {
+    position: relative;
+}
+
+.cv-template1 {
+    width: 40% ;
+    
+    
+}
+
+.cv-template2 {
+    width: 36% ;
+    position: absolute;
+    right: 6%;
+    
+    
+}
+.cv-template1 {
+    position: relative;
+}
+.shadow1,
+.shadow2 {
+    border-radius: 8px;
+    /* z-index: 1000; */
+}
