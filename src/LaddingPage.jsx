@@ -1,122 +1,418 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import "./LaddingPage.css"
-import bgTop from "./assets/96dc5745ec0574bfb1d8f59f84d8e856.svg"
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-
-
+import React from "react";
+import Navbar from "./Components/Navbar";
+import "./LaddingPage.css";
+import bgTop from "./assets/96dc5745ec0574bfb1d8f59f84d8e856.svg";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function LaddingPage() {
+  // let [respHello, setRespHello] = useState('')
 
-// let [respHello, setRespHello] = useState('')
+  // // 3. Create out useEffect function
+  // useEffect(() => {
+  // fetch('http://localhost:8080/api/v1')
+  // .then(response => response.json())
+  // // 4. Setting *dogImage* to the image url that we received from the response above
+  // .then(data => setRespHello(data.message))
+  // },[])
 
-// // 3. Create out useEffect function
-// useEffect(() => {
-// fetch('http://localhost:8080/api/v1')
-// .then(response => response.json())
-// // 4. Setting *dogImage* to the image url that we received from the response above
-// .then(data => setRespHello(data.message))
-// },[])
+  return (
+    <div>
+      <Navbar />
 
-return (
-<div>
-  <Navbar />
-
-  <body>
-
-    <div className="homepage">
-      <div className="__flex __center_items v | hero relative flex justify-center items-center pt-24 pb-10 pl-20">
-        {/* <img src={bgTop} alt="" style={{width: "100vh", height: "auto", }}/> */}
-        <div className="w-responsive-auto flex justify-center">
-          <div className="container-cv w-full md:w-1/2 md:pr-8 hero__content z-10 relative flex flex-row justify-center md:justify-end items-center
-        ">
-            <div className="introduction">
-              <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-black">
-              Générez gratuitement votre CV moderne et professionnel en ligne avec Cv Builder.</h1>
-              <div data-v-7086bbf6="" data-v-6b658702=""
-                className="TextStyle font-semibold TextStyle--body TextStyle--medium TextStyle--leading-normal">
-                <p>En quelques minutes, créez <strong>votre CV gratuitement</strong>, choisissez un modèle,
-                  personnalisez son design, puis<strong> téléchargez-le en PDF</strong>. Parcourez ensuite des offres
-                  d’emploi ciblées, et organisez vos candidatures.</p>
-              </div>
-              <div className="flex flex-row justify-center sm:justify-start">
-                <div className=" metrics flex flex-col sm:flex-row sm:justify-evenly mt-4 sm:mt-10 2xl:mt-12 mb-6 sm:mb-0  items-start sm:w-full
-              ">
-                  <div className="FeatureCard sm:pr-4 my-4 sm:my-0">
-                    <div className="icon"><svg viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        className="Icon text-pink" height="32">
-                        <g opacity="0.9">
-                          <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M29.0809 0C30.7367 0 32.08 1.3433 32.08 2.99908V28.7512C32.08 29.2169 31.9725 29.675 31.7642 30.0946L29.1537 35.3075C28.9214 35.7786 28.4561 35.9997 28.0053 35.9734H0.999695C0.447579 35.9734 0 35.5258 0 34.9737C0 34.4216 0.447579 33.974 0.999695 33.974H26.3386L24.3966 30.0914C24.1901 29.6753 24.0824 29.2173 24.0824 28.7532V2.99908C24.0824 1.3433 25.4257 0 27.0815 0H29.0809ZM28.0801 32.9865L28.6744 34.1748C28.5071 34.0487 28.299 33.974 28.0734 33.974H27.5856L28.0801 32.9865ZM30.0582 28.9638H26.1041C26.1215 29.0457 26.1491 29.1251 26.1861 29.1997L28.0801 32.9863L29.9749 29.2024C30.0127 29.1264 30.0406 29.0463 30.0582 28.9638ZM30.0806 26.9644H26.0818V2.99908C26.0818 2.44754 26.53 1.99939 27.0815 1.99939H29.0809C29.6324 1.99939 30.0806 2.44754 30.0806 2.99908V26.9644Z">
-                          </path>
-                        </g>
-                      </svg></div>
-                    <div className="paragraph">
-                      <div className="title font-bold mb-0 text-dark-500 dark:text-dark-400">3 500 000</div>
-                      <div className="subtitle font-bold mb-0 text-dark-500 dark:text-dark-400">cv créés</div>
+      <body>
+        <div className="homepage">
+          {/* pt-24 pb-10 pl-28  */}
+          <div className=" v | relative flex justify-center items-center w-100">
+            {/* <img src={bgTop} alt="" style={{width: "100vh", height: "auto", }}/> */}
+            <div className="w-responsive-auto flex justify-center w-4/5">
+              <div className="_first_part w-full md:w-1/2 md:pr-8 hero__content z-10 relative flex flex-row justify-center md:justify-end items-center">
+                <div className="introduction">
+                  <h1 className="mb-4 mt-32 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl dark:text-black">
+                    Générez gratuitement votre CV moderne et professionnel en
+                    ligne avec Cv Builder.
+                  </h1>
+                  <div
+                    data-v-7086bbf6=""
+                    data-v-6b658702=""
+                    className="TextStyle font-semibold TextStyle--body TextStyle--medium TextStyle--leading-normal"
+                  >
+                    <p>
+                      En quelques minutes, créez{" "}
+                      <strong>votre CV gratuitement</strong>, choisissez un
+                      modèle, personnalisez son design, puis
+                      <strong> téléchargez-le en PDF</strong>. Parcourez ensuite
+                      des offres d’emploi ciblées, et organisez vos
+                      candidatures.
+                    </p>
+                  </div>
+                  <div className="flex flex-row justify-center sm:justify-start">
+                    <div
+                      className=" metrics flex flex-col sm:flex-row sm:justify-evenly mt-4 sm:mt-10 2xl:mt-12 mb-6 sm:mb-0  items-start sm:w-full"
+                    >
+                      <div className="FeatureCard sm:pr-4 my-4 sm:my-0">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 128 128"
+                            width="3em"
+                            height="3em"
+                          >
+                            <defs>
+                              <path
+                                id="notoPen0"
+                                fill="none"
+                                d="m123.11 17l-.1-.1c1.19-2.58-.4-5.56-3.18-8.24c-2.78-2.68-5.76-4.37-8.24-3.18l-.1-.1S88.07 21.75 63.07 47.95c-.69.79-.69 1.98 0 2.68l14.88 14.88c.69.69 1.89.79 2.68 0C106.74 40.42 123.11 17 123.11 17"
+                              />
+                            </defs>
+                            <path
+                              fill="#bdbdbd"
+                              d="M11.83 121.98c5.36-2.78 13.09-8.23 23.31-16.66l-12.1-12c-8.33 10.12-13.78 17.85-16.56 23.31c2.97.09 5.25 2.47 5.35 5.35"
+                            />
+                            <path
+                              fill="#616161"
+                              d="M4.88 123.56c.79.79 2.58.5 5.26-.79c.5-.2 1.09-.5 1.59-.79a5.536 5.536 0 0 0-5.36-5.36c-.3.6-.6 1.09-.79 1.59c-1.19 2.68-1.39 4.56-.7 5.35"
+                            />
+                            <path
+                              fill="#eee"
+                              d="M11.91 113.51c-.16.14-.33.28-.5.43c-.31.26-.68.54-1.08.44c.18-.73.57-1.39.95-2.04c2.78-4.7 4.81-8.29 8.83-12.06c.27-.25.57-.51.93-.57c.59-.09 1.11.39 1.43.88c.33.5.86 1.45.77 2.08c-.09.67-.83 1.07-1.33 1.52c-3.65 3.29-6.26 6.09-10 9.32"
+                            />
+                            <path
+                              fill="#bdbdbd"
+                              d="M107.87 7.78c-1.01-.89-2.8-2.52-2.8-2.52c-1.01-.89-2.33-1.33-3.71-1.25c-1.38.09-2.63.69-3.5 1.67c-3.99 3.9-7.99 7.8-11.98 11.7c-5.44 5.32-18.63 18.25-19.51 19.35c-.88 1.11-.29 1.73-.19 1.84c1.32 1.45 3.69 1.65 5.42.71c1.72-.94 2.81-2.81 3.13-4.75c.21-1.26.29-1.89 1.22-2.71c.34-.3 19.29-17.99 22.19-21.29c.48-.55 1.92-1.7 3.5-.49c.25.19 5.73 4.81 5.73 4.81l3.49-3.96l-.01-.23c-.02-.27-.02-.27-2.98-2.88"
+                            />
+                            <path
+                              fill="#ff7900"
+                              d="m73.4 55l-7.64-7.64C34.62 78.91 23.67 91.02 20.98 94.49c-.47.61-.42 1.47.13 2.02l10.87 10.48c.55.55 1.41.6 2.02.13c3.47-2.69 15.6-13.23 47.14-44.37c-.1-.11-7.74-7.75-7.74-7.75"
+                            />
+                            <use href="#notoPen0" />
+                            <path
+                              fill="#757575"
+                              d="M104.91 10.47c-.62-.96-2.13-2.32-3.17-2.79c-1.19-.53-2.07-.01-2.83.66c-1.34 1.18-10.25 10.43-12.2 12.86c-.22.28-.45.59-.45.94c5.09-4.83 10.27-9.6 11.92-11.03c1.26-1.09 2.48-2.06 3.47-1.07c.1.1.79.65 2.04 1.7z"
+                            />
+                            <path
+                              fill="#ff7900"
+                              d="M123.11 17c1.23-1.77-.5-5.66-3.27-8.34c-2.78-2.68-6.57-4.54-8.34-3.27c-1.76 1.27-23.42 16.37-48.42 42.57c-.69.79-.69 1.98 0 2.68l14.88 14.88c.69.69 1.89.79 2.68 0c26.1-25.1 41.25-46.75 42.47-48.52"
+                            />
+                            <path
+                              fill="#f8ab68"
+                              d="M29.36 94.04c-1.11.87-4.4 2.43-1.87-1.53c.6-.93 2.63-3.44 3.49-4.45c3.31-3.92 22.27-23.09 25.64-26.63c2.74-2.88 5.16-3.58 5.95-1.58c.54 1.38-.58 2.98-6.42 9.2c-4.86 5.16-21.04 20.44-26.79 24.99m54.37-53.09s-3.51 4.24-6.06 2.09c-2.02-1.71 2.66-5.76 2.66-5.76c.12-.13 16.17-15.21 20.94-19.04c1.96-1.58 4.46-3.34 5.15-2.73c.69.61-.45 2.55-3.46 5.54c-3.02 2.99-19.12 19.78-19.23 19.9"
+                            />
+                            <use href="#notoPen0" />
+                            <path
+                              fill="#eee"
+                              d="M72.33 32.5c-.78.51-.47 2.84-.95 4.03c-.39.95-.38 1.45.42 1.21c.85-.26 1.8-1.54 1.8-3.53c-.01-.97-.46-2.25-1.27-1.71"
+                            />
+                            <path
+                              fill="#ff7900"
+                              d="m104.05 10.92l-.9.7c2.1 1.29 4.75 3.28 7.48 6.01c1.21 1.21 2.88 3.14 3.46 4.31c.54 1.11.74 2.81.28 4.4c-.5 1.73-1.29 2.51-1.61 4.27c1.59-1.97 4.8-6.08 4.8-6.08s-1.39-3.57-6.14-8.33s-7.37-5.28-7.37-5.28"
+                            />
+                            <path
+                              fill="#ff7900"
+                              d="M119.84 8.66c-2.15-2.07-4.9-3.65-6.85-3.68c0 0 3.51 1.88 5.53 4.51c2.14 2.78 3.53 5.31 2.57 6.9c-1.6 2.3-15.78 22.43-40.78 46.66a.964.964 0 0 1-1.48-.16c-1.42-2.19-3.32-4.5-6.16-7.33c-4.06-4.06-6.68-5.89-9.73-7.43c0 0-.7.37-.88 1.6c-.12.79-.05 1.43-.05 1.43l.86-.79c2.39 1.34 5.3 3.5 8.4 6.61c1.33 1.33 2.53 2.67 3.57 3.96c.14.26 1.18 2.46-.95 5.87c0 0-.32.41-.8 1.05c-25.03 24.55-36.67 35.02-38.96 36.58c-2.4 1.63-3.67 1.08-3.67 1.08c.3.3.96 1.04 1.7 1.62c.75.59 1.56.19 1.83-.03c2.9-2.25 11.84-9.97 33.07-30.58c.03-.03.06-.05.08-.08c3.12-3.03 6.51-6.34 10.18-9.95c.02 0 .65.07 1.43-.05c1.22-.18 1.68-.75 1.68-.75v-.01c.07-.05.14-.11.21-.17c26.1-25.1 41.24-46.75 42.47-48.52s-.49-5.66-3.27-8.34"
+                            />
+                            <path
+                              fill="#ffc107"
+                              d="M77.08 51.17c-3.07-3.07-6.64-5.88-9.83-7.51c0 0-.79-.05-1.53.77c-.56.62-.69 1.5-.69 1.5c2.42 1.07 5.96 3.36 9.95 7.34c3 3 5.44 6.16 6.87 8.92c.29.56.51 1.05.68 1.5c0 0 .88.01 1.62-.63c.83-.73.66-1.61.66-1.61c-1.58-3.31-4.51-7.06-7.73-10.28"
+                            />
+                            <path
+                              fill="#bdbdbd"
+                              d="M115.15 13.11c-2.07-2.07-4.37-4.01-6.62-5.56c0 0-1.54-.59-2.95.71s-1.52 2.67-1.52 2.67c2.1 1.29 4.61 3.21 7.34 5.94c2.55 2.55 4.69 5.23 6.16 7.67c0 0 1.56-.12 2.66-1.43s.71-3.05.71-3.05c-1.58-2.37-3.61-4.78-5.78-6.95"
+                            />
+                            <path
+                              fill="#eee"
+                              d="M107.19 8.77c-.53.11-1.03.52-1.06 1.06c-.03.55.41.99.82 1.36c1.28 1.16 2.61 2.34 4.25 2.89c.36.12.83.19 1.08-.1c.16-.18.17-.45.15-.69c-.08-.99-.58-1.9-1.23-2.65c-1.02-1.16-2.36-2.21-4.01-1.87"
+                            />
+                          </svg>
+                        </div>
+                        <div className="paragraph">
+                          <div className="title font-bold text-xl mb-0 text-dark-500 dark:text-dark-400">
+                            3 500 000
+                          </div>
+                          <div className="subtitle font-bold text-xs mb-0 text-dark-500 dark:text-dark-400">
+                            cv créés
+                          </div>
+                        </div>
+                      </div>
+                      <div className="FeatureCard sm:px-2 my-4 sm:my-0">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            width="3em"
+                            height="3em"
+                          >
+                            <path
+                              fill="#ff7900"
+                              d="M19 10h7v2h-7zm0 5h7v2h-7zm0 5h7v2h-7zM6 10h7v2H6zm0 5h7v2H6zm0 5h7v2H6z"
+                            />
+                            <path
+                              fill="#ff7900"
+                              d="M28 5H4a2.002 2.002 0 0 0-2 2v18a2.002 2.002 0 0 0 2 2h24a2.002 2.002 0 0 0 2-2V7a2.002 2.002 0 0 0-2-2M4 7h11v18H4Zm13 18V7h11v18Z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="paragraph">
+                          <div className="title font-bold text-xl mb-0 text-dark-500 dark:text-dark-400">
+                            120 000
+                          </div>
+                          <div className="subtitle font-bold text-xs mb-0 text-dark-500 dark:text-dark-400">
+                            nouveaux CV chaque mois
+                          </div>
+                        </div>
+                      </div>
+                      <div className="FeatureCard sm:pl-4 my-4 sm:my-0">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="3em"
+                            height="3em"
+                          >
+                            <path
+                              fill="none"
+                              stroke="#ff7900"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m12 2l3.104 6.728l7.358.873l-5.44 5.03l1.444 7.268L12 18.28L5.534 21.9l1.444-7.268L1.538 9.6l7.359-.873z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="paragraph">
+                          <div className="title font-bold text-xl mb-0 text-dark-500 dark:text-dark-400">
+                            99%
+                          </div>
+                          <div className="subtitle font-bold text-xs mb-0 text-dark dark:text-dark">
+                            de satisfaction utilisateur
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="FeatureCard sm:px-2 my-4 sm:my-0">
-                    <div className="icon"><svg viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        className="Icon text-pink" height="32">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M16.7981 19.4254L16.7976 11.4818L27.315 8.66301C27.7418 8.54863 27.995 8.10994 27.8806 7.68316C27.7663 7.25639 27.3276 7.00314 26.9008 7.11753L16.7974 9.82537L16.7971 5.73188C16.7971 5.3694 17.0401 5.05268 17.3897 4.95911L29.8314 1.62946C30.2153 1.52655 30.4246 1.6798 30.4246 2.02787V25.5659C30.4246 26.0826 29.9551 26.6779 29.4174 26.8221L16.1951 30.3612C16.0165 30.4113 15.9718 30.411 15.8144 30.3655L2.60735 26.8221C2.06951 26.6779 1.60003 26.0826 1.60003 25.5659V2.02787C1.60003 1.6798 1.80939 1.52655 2.19287 1.62937L12.5289 4.40376C12.9556 4.51831 13.3944 4.26523 13.5089 3.8385C13.6235 3.41177 13.3704 2.97298 12.9437 2.85843L2.60745 0.0839765C1.22435 -0.286855 0 0.60942 0 2.02787V25.5659C0 26.8156 0.964081 28.038 2.19287 28.3675L15.385 31.9067C15.8117 32.0302 16.16 32.0329 16.6182 31.9043L29.8315 28.3676C31.0606 28.038 32.0247 26.8156 32.0247 25.5659V2.02787C32.0247 0.60942 30.8003 -0.286855 29.4174 0.0839175L16.9759 3.41349C15.9266 3.69443 15.1971 4.6452 15.1971 5.73194L15.1974 10.2542L14.1549 10.5336C13.7282 10.648 13.4749 11.0867 13.5893 11.5134C13.7037 11.9402 14.1424 12.1935 14.5691 12.0791L15.1976 11.9107L15.1981 19.8542L14.1549 20.1338C13.7282 20.2482 13.4749 20.6869 13.5893 21.1136C13.7037 21.5404 14.1424 21.7937 14.5691 21.6793L15.1982 21.5107L15.1987 27.9356C15.1987 28.3775 15.5569 28.7356 15.9988 28.7356C16.4406 28.7356 16.7988 28.3774 16.7987 27.9355L16.7982 21.0818L27.315 18.2632C27.7418 18.1488 27.995 17.7101 27.8806 17.2834C27.7663 16.8566 27.3276 16.6033 26.9008 16.7177L16.7981 19.4254ZM19.4576 15.5359L27.3777 13.4639C27.8052 13.352 28.0611 12.9149 27.9492 12.4874C27.8374 12.0599 27.4002 11.8041 26.9728 11.9159L19.0526 13.988C18.6252 14.0998 18.3693 14.537 18.4811 14.9644C18.593 15.3919 19.0301 15.6477 19.4576 15.5359ZM21.7392 24.5577L19.4223 25.1785C18.9955 25.2929 18.5569 25.0396 18.4425 24.6128C18.3281 24.1861 18.5814 23.7474 19.0082 23.633L21.325 23.0122C21.7518 22.8979 22.1905 23.1511 22.3049 23.5779C22.4192 24.0047 22.166 24.4434 21.7392 24.5577Z">
-                        </path>
-                      </svg></div>
-                    <div className="paragraph">
-                      <div className="title font-bold mb-0 text-dark-500 dark:text-dark-400">120 000</div>
-                      <div className="subtitle font-bold mb-0 text-dark-500 dark:text-dark-400">nouveaux CV chaque mois</div>
+                  <div className="2xl:flex flex-col items-center mt-24">
+                    <div data-v-6b658702="">
+                      <a
+                        type="button"
+                        href="#"
+                        className="Button Button--primary Button--large "
+                      >
+                        <span className="__btn_creer_cv __Helvetica--900 ">
+                          Créer SON CV
+                        </span>
+                      </a>
                     </div>
-                  </div>
-                  <div className="FeatureCard sm:pl-4 my-4 sm:my-0">
-                    <div className="icon"><svg viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        className="Icon text-pink" height="32">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M9.34938 0.447862L7.12406 6.98076H0.700102C0.0194733 6.98076 -0.259988 7.85479 0.29324 8.25045L5.56308 12.003C5.78802 12.1632 6.10021 12.1107 6.26039 11.8858C6.42057 11.6608 6.36807 11.3486 6.14313 11.1885L1.63848 7.98076H7.2681C7.6099 7.98076 7.91565 7.76259 8.02505 7.43704L9.97733 1.70574L11.3167 5.64473C11.4056 5.90617 11.6896 6.04604 11.9511 5.95714C12.2125 5.86824 12.3524 5.58423 12.2635 5.32279L10.6065 0.449792C10.3999 -0.149609 9.55527 -0.149609 9.34938 0.447862ZM4.08816 19.8064C3.51298 20.3435 2.80534 19.6631 3.01763 19.0327L4.95263 13.3547C5.04171 13.0933 5.32581 12.9536 5.58719 13.0427C5.84857 13.1318 5.98825 13.4159 5.89917 13.6772L4.30533 18.3542L9.53574 14.1714C9.78836 13.9357 10.1707 13.9357 10.3903 14.1465L15.65 18.3558L13.5181 12.0996C13.4026 11.7639 13.5233 11.3925 13.8119 11.1887L18.3165 7.98096H12.4779C12.2018 7.98096 11.9779 7.7571 11.9779 7.48096C11.9779 7.20482 12.2018 6.98096 12.4779 6.98096H19.2549C19.9356 6.98096 20.2168 7.85617 19.6609 8.25125L14.5125 11.9174L16.9378 19.0344C17.1493 19.6627 16.4444 20.342 15.8956 19.8314L9.97874 15.0957L4.08816 19.8064ZM3.43455 19.0505L3.48745 19.0082C3.46965 19.0201 3.45197 19.0341 3.43455 19.0505ZM16.5478 19.0743C16.5288 19.0566 16.5096 19.0413 16.4903 19.0283L16.5478 19.0743Z">
-                        </path>
-                      </svg></div>
-                    <div className="paragraph">
-                      <div className="title font-bold mb-0 text-dark-500 dark:text-dark-400">99%</div>
-                      <div className="subtitle font-bold mb-0 text-dark-500 dark:text-dark-400">de satisfaction utilisateur</div>
+                    <div className="__Helvetica--400 | mt-3 font-bold">
+                      Inscription gratuite
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="hidden 2xl:flex flex-col items-center mt-24">
-                <div data-v-6b658702=""><a type="button" href="https://cvdesignr.com/fr/signup"
-                    className="Button Button--primary Button--large"> <span className="Button__Content ">Créer mon
-                      CV</span></a></div>
-                <div className="mt-2">Inscription gratuite</div>
-              </div>
-            </div>
-          </div>
-          <div className="
-          hidden
+              <div
+                className="
+          __secind_part
           md:flex md:w-1/2 md:pl-10
           hero__video
           relative
           z-10
           flex-row
           items-center
-        ">
-          
-          <div className="cv-template1 relative z-10 flex-shrink-0">
-            <img alt="Exemple de CV moderne" className="shadow1" data-src="https://cdn.cvdesignr.com/static/landing/uploads/d4ee025e-4287-4dba-97bf-dbddb6c3d756.jpeg" src="https://cdn.cvdesignr.com/static/landing/uploads/d4ee025e-4287-4dba-97bf-dbddb6c3d756.jpeg" lazy="loaded" />
+        "
+              >
+                <div className="cv-1 relative z-10 flex-shrink-0">
+                  <img
+                    alt="Exemple de CV moderne"
+                    className="shadow"
+                    data-src="https://cdn.cvdesignr.com/static/landing/uploads/d4ee025e-4287-4dba-97bf-dbddb6c3d756.jpeg"
+                    src="https://cdn.cvdesignr.com/static/landing/uploads/d4ee025e-4287-4dba-97bf-dbddb6c3d756.jpeg"
+                    lazy="loaded"
+                  />
+                </div>
+                <div className="cv-2 relative z-1000 flex-shrink-0">
+                  <img
+                    alt="Exemple de CV moderne"
+                    className="shadow"
+                    data-src="https://cdn.cvdesignr.com/static/landing/uploads/2ddda8bd-e2fd-43c5-a4b1-39be5d6fabf5.jpeg"
+                    src="https://cdn.cvdesignr.com/static/landing/uploads/2ddda8bd-e2fd-43c5-a4b1-39be5d6fabf5.jpeg"
+                    lazy="loaded"
+                  />
+                </div>
+                {/* <div className="background-cv-template flex-shrink-0"></div> */}
+              </div>
+            </div>
           </div>
-          <div className="cv-template2 relative z-1000 flex-shrink-0">
-            <img alt="Exemple de CV moderne" className="shadow2" data-src="https://cdn.cvdesignr.com/static/landing/uploads/2ddda8bd-e2fd-43c5-a4b1-39be5d6fabf5.jpeg" src="https://cdn.cvdesignr.com/static/landing/uploads/2ddda8bd-e2fd-43c5-a4b1-39be5d6fabf5.jpeg" lazy="loaded" />
+
+          <div className="__savoir_plus_container| w-100 flex mt-5 flex-col justify-center items-center">
+            <div>
+              <span className="__Helvetica--900 | font-extrabold ">
+                En savoir plus
+              </span>
+            </div>
+            <div>
+              <svg
+                className="__arrow_down"
+                xmlns="http://www.w3.org/2000/svg"
+                width="4em"
+                height="4em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#ff7900"
+                  d="M5.8 9.7L12 16l6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3c-.2.2-.3.4-.3.7s.1.5.3.7"
+                />
+              </svg>
+            </div>
           </div>
-            <div className="background-cv-template flex-shrink-0"></div>
+
+          <div className="| w-100 flex flex-col justify-center items-center mt-4">
+            <span className="| font-extrabold">
+              Comment ça marche, <strong className="|">CVDesignR ?</strong>
+            </span>
+            <span className="font-medium mt-1">
+              Nous simplifions le parcours candidat à un niveau inégalé
+            </span>
+            <div
+              data-v-6b658702=""
+              class="
+            flex flex-col
+            items-start
+            md:flex-row md:justify-center
+            steps
+            mx-auto
+            xl:w-3/4
+            mt-6
+            md:mt-20
+          "
+            >
+              <div
+                class="
+              w-full
+              md:w-1/3
+              step
+              flex flex-col
+              items-center
+              mt-12
+              md:mt-0
+            "
+              >
+                <div
+                  data-v-6b658702=""
+                  class="cursor-pointer StepCard | flex flex-col "
+                >
+                  <div class="number">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10em"
+                      height="10em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#ff7900"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12.438 17V7L9 9.5"
+                      />
+                    </svg>
+                  </div>
+                  <div class="paragraph">
+                    <div class="__Helvetica--900">Créer moi-même mon CV</div>
+                    <div class="__Helvetica--400">
+                      et le télécharger en PDF, ou en version web
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-v-6b658702=""
+                class="
+              w-full
+              md:w-1/3
+              step
+              flex flex-col
+              items-center
+              mt-12
+              md:mt-0
+            "
+              >
+                <div
+                  data-v-6b658702=""
+                  class="cursor-pointer StepCard | flex flex-col"
+                >
+                  <div class="number">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10em"
+                      height="10em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#ff7900"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M8.75 9.92c0-3.894 5.77-3.894 5.77 0c0 2.94-3.77 5.476-5.77 7.08c0 0 3.75-.625 6.25 0"
+                      />
+                    </svg>
+                  </div>
+                  <div class="paragraph">
+                    <div class="__Helvetica--900">Me faire remarquer</div>
+                    <div class="__Helvetica--400">
+                      par les recruteurs en un seul clic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-v-6b658702=""
+                class="
+              w-full
+              md:w-1/3
+              step
+              flex flex-col
+              items-center
+              mt-12
+              md:mt-0
+            "
+              >
+                <div
+                  data-v-6b658702=""
+                  class="cursor-pointer StepCard | flex flex-col"
+                >
+                  <div class="number">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10em"
+                      height="10em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#ff7900"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M8.75 9.493c0-3.324 6.25-3.324 6.25 0c0 0 0 2.507-3.125 2.507C15 12 15 14.507 15 14.507c0 3.324-6.25 3.324-6.25 0"
+                      />
+                    </svg>
+                  </div>
+                  <div class="paragraph">
+                    <div class="__Helvetica--900">
+                      Trouver des offres d’emploi
+                    </div>
+                    <div class="__Helvetica--400">
+                      qui me correspondent, postuler et m’organiser
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </body>
     </div>
-
-  </body>
-
-</div>
-)
+  );
 }
 
-export default LaddingPage
+export default LaddingPage;

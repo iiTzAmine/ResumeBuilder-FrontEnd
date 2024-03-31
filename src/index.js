@@ -1,15 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import LaddingPage from './LaddingPage';
-import LoginPage from './Pages/LoginPage';
-import RegisterPage from './Pages/RegisterPage';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import "./index.css"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import LaddingPage from "./LaddingPage";
+import LoginPage from "./Pages/LoginPage";
+import RegistrationPage from "./Pages/RegistrationPage";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <RegisterPage />,
+    element: <RegistrationPage />,
   },
 ]);
 
@@ -31,4 +28,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-

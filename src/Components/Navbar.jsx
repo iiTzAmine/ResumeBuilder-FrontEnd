@@ -1,32 +1,60 @@
-import React from 'react'
-import "./Css's/NavbarStyle.css"
-import { Link } from 'react-router-dom'
-import Logo from "../assets/orangeLogo.png";
+import React from "react";
+import "./Css's/NavbarStyle.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className='__nav-bar | container-fluid d-flex justify-content-between align-items-center fixed-top'>
+    <div className="__nav-bar | container-fluid d-flex justify-content-between align-items-center">
       {/* <h1 className="logo me-auto me-lg-0"><Link to={'/'}>Logo</Link></h1> */}
-      <Link to={"/"} className="__logo_container">
-        <img className="__logo" src={Logo} alt="" />
-      </Link>
+      <div className=" | flex h-100 justify-center align-items-center ml-40">
+        <Link
+          to={"/"}
+          className="__logo_container | h-auto flex justify-center align-center"
+        >
+          <svg
+            className="__logo | rounded-lg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#ff7900"
+              d="M0 0h24v24H0zm3.43 20.572h17.143v-3.429H3.43z"
+            />
+          </svg>
+        </Link>
+        <nav id="navbar" className="navbar order-last order-lg-0">
+          <ul>
+            {/* className="active" */}
+            <li>
+              <Link to={"/"}>Accueil</Link>
+            </li>
+            <li>
+              <a href="#">Créer un CV</a>
+            </li>
+            <li>
+              <a href="#">Tout sur un CV</a>
+            </li>
+            <li>
+              <a href="#">Offre d'emplois</a>
+            </li>
+            <li>
+              <a href="#">À propos</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+          <i className="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
 
-      <nav id="navbar" className="navbar order-last order-lg-0">
-        <ul>
-        {/* className="active" */}
-          <li><Link to={"/"}>Accueil</Link></li>
-          <li><a href="#">Créer un CV</a></li>
-          <li><a href="#">Tout sur un CV</a></li>
-          <li><a href="#">Offre d'emplois</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-        <i className="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-
-      <div className='_flex __auth_container'>
-        <Link to={"/register"} className='__auth_btn'>Register</Link>
-        <Link to={"/login"} className='__auth_btn'>Login</Link>
+      <div className="_flex __auth_container">
+        <Link to={"/register"} className="__auth_btn">
+          Register
+        </Link>
+        <Link to={"/login"} className="__auth_btn">
+          Login
+        </Link>
       </div>
 
       {/* <div className="header-social-links">
@@ -52,7 +80,7 @@ function Navbar() {
         </a>
       </div> */}
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
