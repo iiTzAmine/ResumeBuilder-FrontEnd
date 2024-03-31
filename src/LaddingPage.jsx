@@ -1,9 +1,6 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/NavBar/Navbar";
 import "./LaddingPage.css";
-import bgTop from "./assets/96dc5745ec0574bfb1d8f59f84d8e856.svg";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 function LaddingPage() {
   // let [respHello, setRespHello] = useState('')
@@ -47,9 +44,7 @@ function LaddingPage() {
                     </p>
                   </div>
                   <div className="flex flex-row justify-center sm:justify-start">
-                    <div
-                      className=" metrics flex flex-col sm:flex-row sm:justify-evenly mt-4 sm:mt-10 2xl:mt-12 mb-6 sm:mb-0  items-start sm:w-full"
-                    >
+                    <div className=" metrics flex flex-col sm:flex-row sm:justify-evenly mt-4 sm:mt-10 2xl:mt-12 mb-6 sm:mb-0  items-start sm:w-full">
                       <div className="FeatureCard sm:pr-4 my-4 sm:my-0">
                         <div className="icon">
                           <svg

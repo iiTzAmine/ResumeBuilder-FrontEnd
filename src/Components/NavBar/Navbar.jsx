@@ -1,5 +1,5 @@
 import React from "react";
-import "./Css's/NavbarStyle.css";
+import "./NavbarStyle.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -29,7 +29,7 @@ function Navbar() {
               <Link to={"/"}>Accueil</Link>
             </li>
             <li>
-              <a href="#">Créer un CV</a>
+              <Link to={"/create-resume"}>Créer un CV</Link>
             </li>
             <li>
               <a href="#">Tout sur un CV</a>

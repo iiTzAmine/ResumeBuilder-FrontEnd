@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import LaddingPage from "./LaddingPage";
-import LoginPage from "./Pages/LoginPage";
-import RegistrationPage from "./Pages/RegistrationPage";
+import LoginPage from "./Pages/AuthPages/LoginPage";
+import RegistrationPage from "./Pages/AuthPages/RegistrationPage";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import CreateResume from "./Pages/CreateResume";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegistrationPage />,
+  },
+  {
+    path: "/create-resume",
+    element: <CreateResume />,
   },
 ]);
 
