@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      textDecorationColor: {
+        oranage: "#ff7700",
+      }
+    },
   },
   plugins: [],
 }

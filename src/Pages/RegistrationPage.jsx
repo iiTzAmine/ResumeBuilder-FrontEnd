@@ -1,6 +1,6 @@
 import React from "react";
-import "./RegistrationPage.css";
-import NavbarAuth from "../../Components/NavBar/NavbarAuth";
+import "./Css's/register.css";
+import NavbarAuth from "../Components/NavbarAuth";
 
 function RegistrationPage() {
   return (

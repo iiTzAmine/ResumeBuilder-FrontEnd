@@ -184,7 +184,7 @@ function LaddingPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="2xl:flex flex-col items-center mt-24">
+                  <div className="2xl:flex flex-col  mt-24">
                     <div data-v-6b658702="">
                       <a
                         type="button"

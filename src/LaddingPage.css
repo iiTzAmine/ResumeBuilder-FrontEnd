@@ -56,6 +56,7 @@
     var(--color-orange-100)
   );
   height: 80vh;
+  min-height: 600px;
 }
 
 .container-cv {

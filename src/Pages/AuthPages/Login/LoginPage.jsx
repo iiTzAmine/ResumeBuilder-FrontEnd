@@ -1,11 +1,9 @@
 import React from "react";
-import "./LoginPage.css";
-import NavbarAuth from "../../Components/NavBar/NavbarAuth";
-// import Navbar from "../Components/Navbar";
+import NavbarAuth from "../../../Components/NavBar/NavbarAuth";
 
 function LoginPage() {
   return (
-    <div>
+    <div className="__first">
       <NavbarAuth />
       <div className="main">
         <div className="__image_"></div>

@@ -1,37 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavbarStyle.css";
 
 function NavbarAuth() {
   return (
-    <div className="__nav-bar | container-fluid d-flex justify-content-between align-items-center">
-      {/* <h1 className="logo me-auto me-lg-0"><Link to={'/'}>Logo</Link></h1> */}
-      <div className=" | flex h-100 justify-center align-items-center ml-40">
+    <nav class="bg-black border-gray-200 dark:bg-gray-900 pb-3">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <Link
-          to={"/"}
-          className="__logo_container | h-auto flex justify-center align-center"
+          href="https://flowbite.com/"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
         >
+          <img
+            src={window.location.origin + "/orangeLogo.png"}
+            class="h-14 pl-10"
+            alt="Orange Logo"
+          />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Orange <br /> Digitale Center
+          </span>
+        </Link>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
           <svg
-            className="__logo_auth | rounded-lg"
+            class="w-5 h-5"
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
+            fill="none"
+            viewBox="0 0 17 14"
           >
             <path
-              fill="#ff7900"
-              d="M0 0h24v24H0zm3.43 20.572h17.143v-3.429H3.43z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
-        </Link>
+        </button>
       </div>
-      <div className="_flex __auth_container">
-        <Link to={"/register"} className="__auth_btn">
-          Register
-        </Link>
-        <Link to={"/login"} className="__auth_btn">
-          Login
-        </Link>
-      </div>
-    </div>
+    </nav>
   );
 }
 
